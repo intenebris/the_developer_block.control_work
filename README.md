@@ -32,7 +32,9 @@
 ```
 void Main()
 {
-    //На старте выполнения были заданы массивы. Для выбора одного из заданных массивов был использован метод switch.
+```
+*На старте выполнения были заданы массивы. Для выбора одного из заданных массивов был использован метод switch.*
+```
     System.Console.WriteLine("Выберите один из массивов:");
     Console.WriteLine("1 - [“Hello”, “2”, “world”, “:-)”] \n2 - [“1234”, “1567”, “-2”, “computer science”] \n3 - [“Russia”, “Denmark”, “Kazan”]");
     string[] array = new string[] { };
@@ -56,14 +58,17 @@ void Main()
 
 
 }
-// Способ ввода данных с клавиатуры в консоле был выделен в отдельную функцию
+```
+*Способ ввода данных с клавиатуры в консоле был выделен в отдельную функцию*
+```
 string? InputOption(string msg)
 {
     System.Console.Write(msg);
     return Console.ReadLine();
 }
-
-// В первую очередь мы вычисляем размер нового массива, который будет сформирован из строк старого массива длина которых меньше, либо равна 3 символам.
+```
+*В первую очередь мы вычисляем размер нового массива, который будет сформирован из строк старого массива длина которых меньше, либо равна 3 символам.*
+```
 int FindSizeArray(string[] arr, int maxLength)
 {
     int sizeNewArray = 0;
@@ -73,8 +78,9 @@ int FindSizeArray(string[] arr, int maxLength)
     }
     return sizeNewArray;
 }
-
-// Далее, зная размер нового массива, создаем сам новый массив.
+```
+*Далее, зная размер нового массива, создаем сам новый массив.*
+```
 string[] CreateNewArray(string[] arr, int maxLength)
 {
     string[] tempArray = new string[FindSizeArray(arr, maxLength)];
@@ -89,8 +95,9 @@ string[] CreateNewArray(string[] arr, int maxLength)
     }
     return tempArray;
 }
-
-// *В завершении создаем функцию для вывода получившегося результата в консоль.*
+```
+*В завершении создаем функцию для вывода получившегося результата в консоль.*
+```
 void PrintNewArray(string[] arr, int maxLength)
 {
     string[] resultArray = CreateNewArray(arr, maxLength);
@@ -110,6 +117,7 @@ void PrintNewArray(string[] arr, int maxLength)
 
 Main();
 ```
+
 Пример отображения результата работы программы в консоли:
 ```
 PS C:\gb-workshop\the_developer_block\Final_work> dotnet run
