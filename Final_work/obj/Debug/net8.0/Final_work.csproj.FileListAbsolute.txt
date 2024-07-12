@@ -1,0 +1,15 @@
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.GeneratedMSBuildEditorConfig.editorconfig
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.AssemblyInfoInputs.cache
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.AssemblyInfo.cs
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.csproj.CoreCompileInputs.cache
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.sourcelink.json
+C:\gb-workshop\the_developer_block\Final_work\bin\Debug\net8.0\Final_work.exe
+C:\gb-workshop\the_developer_block\Final_work\bin\Debug\net8.0\Final_work.deps.json
+C:\gb-workshop\the_developer_block\Final_work\bin\Debug\net8.0\Final_work.runtimeconfig.json
+C:\gb-workshop\the_developer_block\Final_work\bin\Debug\net8.0\Final_work.dll
+C:\gb-workshop\the_developer_block\Final_work\bin\Debug\net8.0\Final_work.pdb
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.dll
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\refint\Final_work.dll
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.pdb
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\Final_work.genruntimeconfig.cache
+C:\gb-workshop\the_developer_block\Final_work\obj\Debug\net8.0\ref\Final_work.dll
