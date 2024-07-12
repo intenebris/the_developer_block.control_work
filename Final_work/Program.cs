@@ -1,4 +1,4 @@
-﻿// Задача: Написать программу, которая из имеющегося массива строк формирует новый массив из строк, 
+// Задача: Написать программу, которая из имеющегося массива строк формирует новый массив из строк, 
 // длина которых меньше, либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, 
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
@@ -10,6 +10,7 @@
 
 void Main()
 {
+    //На старте выполнения были заданы массивы. Для выбора одного из заданных массивов был использован метод switch.
     System.Console.WriteLine("Выберите один из массивов:");
     Console.WriteLine("1 - [“Hello”, “2”, “world”, “:-)”] \n2 - [“1234”, “1567”, “-2”, “computer science”] \n3 - [“Russia”, “Denmark”, “Kazan”]");
     string[] array = new string[] { };
@@ -33,24 +34,25 @@ void Main()
 
 
 }
-
-void PrintNewArray(string[] arr, int maxLength)
+// Способ ввода данных с клавиатуры в консоле был выделен в отдельную функцию
+string? InputOption(string msg)
 {
-    string[] resultArray = CreateNewArray(arr, maxLength);
-    if (resultArray.Length == 0)
-    {
-        System.Console.WriteLine(" ");
-    }
-    else
-        for (int i = 0; i < resultArray.Length; i++)
-        {
-            if (i == resultArray.Length - 1)
-                Console.Write($"“{resultArray[i]}”\n");
-            else
-                Console.Write($"“{resultArray[i]}”, ");
-        }
+    System.Console.Write(msg);
+    return Console.ReadLine();
 }
 
+// В первую очередь мы вычисляем размер нового массива, который будет сформирован из строк старого массива длина которых меньше, либо равна 3 символам.
+int FindSizeArray(string[] arr, int maxLength)
+{
+    int sizeNewArray = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= maxLength) sizeNewArray++;
+    }
+    return sizeNewArray;
+}
+
+// Далее, зная размер нового массива, создаем сам новый массив.
 string[] CreateNewArray(string[] arr, int maxLength)
 {
     string[] tempArray = new string[FindSizeArray(arr, maxLength)];
@@ -66,20 +68,22 @@ string[] CreateNewArray(string[] arr, int maxLength)
     return tempArray;
 }
 
-int FindSizeArray(string[] arr, int maxLength)
+// В завершении создаем функцию для вывода получившегося результата в консоль.
+void PrintNewArray(string[] arr, int maxLength)
 {
-    int sizeNewArray = 0;
-    for (int i = 0; i < arr.Length; i++)
+    string[] resultArray = CreateNewArray(arr, maxLength);
+    if (resultArray.Length == 0)
     {
-        if (arr[i].Length <= maxLength) sizeNewArray++;
+        System.Console.WriteLine(" ");
     }
-    return sizeNewArray;
-}
-
-string? InputOption(string msg)
-{
-    System.Console.Write(msg);
-    return Console.ReadLine();
+    else
+        for (int i = 0; i < resultArray.Length; i++)
+        {
+            if (i == resultArray.Length - 1)
+                Console.Write($"“{resultArray[i]}”\n");
+            else
+                Console.Write($"“{resultArray[i]}”, ");
+        }
 }
 
 Main();
